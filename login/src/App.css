@@ -1,0 +1,133 @@
+.poetsen-one-regular {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family:"Poetsen One";
+  display:Block;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('ERTH.jpeg');
+  image-orientation:cover;
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat;
+  margin: 0;
+  background-color: #0C67A0;
+}
+
+.container {
+  font-family:"Poetsen One";
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+h3{
+  padding-left: 15px;
+}
+.form-input{
+  height: 25px;
+}
+.form-container {
+  position: relative;
+  z-index: 1;
+  background-color: rgb(210, 232, 183);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px hsl(0, 0%, 96%);
+  height: 400px;
+  width: 350px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.form-toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.form-toggle button {
+  width: 50%;
+  padding: 12px;
+  background-color: #f3f3f3;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 12px 12px 0 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.form-toggle .active {
+  background-color: #033452;
+  color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #033452;
+}
+
+.form input {
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+.form input:focus {
+  border-color: #7f00ff;
+  outline: none;
+}
+
+.form button {
+  padding: 14px;
+  background-color: #033452;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+#lf-input{
+width: max-content;
+}
+.form button:hover {
+  background-color: #ff69b4; /* Bright pink on hover */
+}
+
+.form a {
+  color: #007bff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  text-align: right;
+  font-size: 14px;
+}
+
+.form a:hover {
+  text-decoration: underline;
+}
+
+.form p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 15px;
+}
+img{
+  width: 30px;
+  height: 30px;
+}
