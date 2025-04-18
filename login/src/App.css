@@ -1,133 +1,201 @@
-.poetsen-one-regular {
-  font-family: "Poetsen One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
 
 body {
-  font-family:"Poetsen One";
-  display:Block;
+  font-family: "Poetsen One", sans-serif;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-image: url('ERTH.jpeg');
-  image-orientation:cover;
-  background-size: cover; /* Ensures the image covers the entire background */
-  background-position: center; /* Centers the image */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   margin: 0;
   background-color: #0C67A0;
 }
 
 .container {
-  font-family:"Poetsen One";
   display: flex;
-  position: relative;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
+  padding: 20px;
 }
-h3{
+
+h3 {
   padding-left: 15px;
+  color: white;
+  font-size: 28px;
 }
-.form-input{
-  height: 25px;
-}
+
 .form-container {
   position: relative;
   z-index: 1;
-  background-color: rgb(210, 232, 183);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 8px 16px hsl(0, 0%, 96%);
-  height: 400px;
-  width: 350px;
+  background: linear-gradient(135deg, rgba(3, 52, 82, 0.85), rgba(255, 182, 193, 0.2));
+  backdrop-filter: blur(10px);
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  height: auto;
+  width: 400px;
   transition: transform 0.3s ease-in-out;
+  color: white;
 }
 
 .form-toggle {
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .form-toggle button {
   width: 50%;
   padding: 12px;
-  background-color: #f3f3f3;
+  background-color: transparent;
   border: none;
   cursor: pointer;
   font-size: 16px;
-  border-radius: 12px 12px 0 0;
-  transition: background-color 0.3s, color 0.3s;
+  font-weight: bold;
+  color: #033452;
+  transition: background-color 0.4s, color 0.4s, transform 0.2s;
+  border-radius: 0;
+}
+
+.form-toggle button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transform: scale(1.03);
 }
 
 .form-toggle .active {
-  background-color: #033452;
+  background-color: #ff69b4;
   color: white;
+  border-radius: 12px 12px 0 0;
 }
 
-.form {
+.form, #lf {
   display: flex;
   flex-direction: column;
 }
 
-.form h2 {
+.form h2, #lf h2 {
   margin-bottom: 20px;
   text-align: center;
-  color: #033452;
+  color: #ffffff;
 }
 
-.form input {
-  padding: 14px;
-  margin-bottom: 15px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
+.form input, #lf input {
+  padding: 16px;
+  margin-bottom: 18px;
+  width: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 14px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.form input::placeholder, #lf input::placeholder {
   font-size: 15px;
-  transition: border-color 0.3s;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  opacity: 0.85;
+  transition: all 0.3s ease;
 }
 
-.form input:focus {
-  border-color: #7f00ff;
+.form input:focus::placeholder, #lf input:focus::placeholder {
+  opacity: 0.4;
+  transform: translateY(-2px);
+}
+
+.form input:focus, #lf input:focus {
+  border-color: #ff69b4;
+  background-color: rgba(255, 255, 255, 0.3);
   outline: none;
 }
 
-.form button {
-  padding: 14px;
-  background-color: #033452;
+.form button, #lf button {
+  padding: 16px;
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 50px;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-#lf-input{
-width: max-content;
-}
-.form button:hover {
-  background-color: #ff69b4; /* Bright pink on hover */
+  font-size: 17px;
+  font-weight: bold;
+  box-shadow: 0 6px 18px rgba(255, 105, 180, 0.4);
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
 }
 
-.form a {
-  color: #007bff;
+.form button:hover, #lf button:hover {
+  background: linear-gradient(135deg, #e100ff, #7f00ff);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(127, 0, 255, 0.4);
+}
+
+.form a, #lf a {
+  color: #ffffff;
   text-decoration: none;
-  margin-bottom: 10px;
-  text-align: right;
   font-size: 14px;
 }
 
-.form a:hover {
+.form a:hover, #lf a:hover {
   text-decoration: underline;
 }
 
-.form p {
+.form p, #lf p {
   text-align: center;
   font-size: 14px;
   margin-top: 15px;
+  color: #ffffff;
 }
-img{
+
+img {
   width: 30px;
   height: 30px;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  position: relative;
+  font-family: "Poetsen One", sans-serif;
+  color: #033452;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close:hover {
+  color: #000;
 }
